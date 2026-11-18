@@ -1,34 +1,35 @@
 # MyTools — pyRevit Extension for Autodesk Revit 2026
 
-Набор инструментов для автоматизации рутинных BIM-задач в Autodesk Revit (Python / pyRevit / Revit API).
+A custom **pyRevit** extension designed to automate routine BIM workflows in **Autodesk Revit 2026 (.NET 8)**. The toolset adds a dedicated `MyTools` ribbon tab with 5 practical tools organized across 4 panels.
 
-![Панель MyTools](ribbon.png)
+![MyTools Ribbon](ribbon.png)
 
-## Инструменты
+---
 
-### Виды
-* **Пакетное переименование** — массовое добавление префиксов/суффиксов и поиск-замена в названиях выбранных видов.
-* **Чистка видов** — поиск и безопасное удаление неиспользуемых видов (с защитой активного вида).
+## Features
 
-### Листы
-* **Создать листы** — пакетная генерация листов с выбором основной надписи, префиксом, сквозной нумерацией и проверкой на дубликаты.
+### Views
+* **Batch View Renaming:** Rename multiple selected views at once by adding prefixes/suffixes or using find-and-replace.
+* **Unused Views Cleanup:** Safely detect and delete unused views from the project while automatically protecting the active view.
 
-### Модель
-* **Авто-нумерация** — автоматическая простановка параметра «Марка» для дверей, окон, колонн и помещений на текущем виде (сортировка слева направо, сверху вниз).
+### Sheets
+* **Batch Sheet Generator:** Create multiple sheets in one click with custom title blocks, prefixes, sequential numbering, and built-in duplicate checks.
 
-### Данные
-* **Экспорт в Excel** — пакетная выгрузка выбранных спецификаций в файлы `.csv` (UTF-8 BOM, разделитель `;` — корректно открывается в Excel с кириллицей).
+### Model
+* **Spatial Auto-Numbering:** Automatically assign the `Mark` parameter to doors, windows, columns, and rooms on the active view, sorted spatially (left-to-right, top-to-bottom).
 
-## Установка
-1. Установите [pyRevit](https://github.com/pyrevitlabs/pyRevit).
-2. Скачайте или склонируйте этот репозиторий (папку `MyTools.extension`).
-3. В Revit перейдите на вкладку **pyRevit → Settings → Custom Extension Directories** и добавьте путь к родительской папке с `MyTools.extension`.
-4. Нажмите **Save Settings and Reload**.
+### Data
+* **Schedule Export to Excel:** Batch export selected Revit schedules to clean **UTF-8 BOM CSV** files that open directly in Microsoft Excel with proper encoding.
 
-## Стек
-* Python (IronPython)
-* Autodesk Revit API (совместимо с Revit 2026 / .NET 8)
-* pyRevit (`forms`, `revit`, `DB`)
+---
 
-## Автор
-**Illia Lishchynskyi**
+## Requirements
+* **Autodesk Revit 2026** (.NET 8)
+* **[pyRevit](https://github.com/pyrevitlabs/pyRevit)** installed
+
+---
+
+## Installation
+1. Download or clone this repository:
+   ```bash
+   git clone [https://github.com/ilyale228322/Revit-MyTools-pyRevit.git](https://github.com/ilyale228322/Revit-MyTools-pyRevit.git)
